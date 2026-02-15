@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Billing - THEFAX Hosting</title>
+<link rel="stylesheet" href="style.css">
+<script>
+function getPlan() {
+const urlParams = new URLSearchParams(window.location.search);
+document.getElementById("selectedPlan").innerText = urlParams.get('plan');
+}
+</script>
+</head>
+<body onload="getPlan()">
+
+<h1>Checkout</h1>
+
+<p>You selected: <strong id="selectedPlan"></strong></p>
+
+<form action="success.html">
+<label>Email:</label><br>
+<input type="email" required><br><br>
+
+<label>Server Name:</label><br>
+<input type="text" required><br><br>
+
+<button type="submit" class="btn">Complete Order</button>
+</form>
+
+</body>
+</html>
